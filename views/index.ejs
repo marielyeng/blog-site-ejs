@@ -1,0 +1,54 @@
+<%- include("header.ejs") %>
+
+
+<div class="container">
+    <div class="intro">
+        <p><span style="font-weight: bold;">Instruction: </span> Start writing your blog today. You may write anything under the sun &#x2600. Have fun writing &#128521!</p>
+    </div>
+    <form action="/submit" method="POST" id="addItem" onsubmit="alert('Entry saved successfully!')">
+    <div class="row">
+      <div class="col-25">
+        <label for="authorName">Name:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="name" name="authorName" placeholder="Your name.." required>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="title">Title:</label>
+      </div>
+      <div class="col-75">
+        <input type="text" id="title" name="title" placeholder="Your blog title.." required>
+      </div>
+    </div>
+    <div class="row">
+        <div class="col-25">
+          <label for="category">Category</label>
+        </div>
+        <div class="col-75">
+          <select id="category" name="category" required>
+            <option value="food">Food</option>
+            <option value="travel">Travel</option>
+            <option value="education">Education</option>
+            <option value="spiritual">Spiritual</option>
+            <option value="science">Science</option>
+          </select>
+        </div>
+      </div>
+    <div class="row">
+      <div class="col-25">
+        <label for="content">Content</label>
+      </div>
+      <div class="col-75">
+        <textarea id="content" name="content" placeholder="Write something.." style="height:200px" required></textarea>
+      </div>
+    </div>
+    <br>
+    <div class="row">
+      <input type="submit" value="Submit">
+      <input type="reset" value="Clear">
+    </div>
+    </form>
+  </div>
+<%- include("footer.ejs") %>
